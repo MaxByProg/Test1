@@ -10,32 +10,44 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.beans.XMLEncoder;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 public class TSCTest1 {
+    static String filepath1 = "dep1.xml";
+    static String filepath2 = "dep2.xml";
+    static List<Integer> salaries1 = new ArrayList<Integer>();
+    static List<Integer> salaries2 = new ArrayList<Integer>();
+    static List<String> fios1 = new ArrayList<String>();
+    static List<String> fios2 = new ArrayList<String>();
+    static List<String> result1 = new ArrayList<>();
+    static List<String> result2 = new ArrayList<>();
+
     public static void main(String[] args) {
         justDoIt();
     }
 
     //алгоритм решения
     public static void justDoIt() {
+
+        // цикл для чтения потоков
         try {
-            int counter = 0;
-            while(counter < 3) {
-                Thread thread1 = new Thread(new Thread1());
-                thread1.start();
-                Thread thread2 = new Thread(new Thread2());
-                thread2.start();
-                Thread.sleep(5000);
-                if (counter == 3)
-                    break;
-                counter++;
-            }
+//            int counter = 0;
+//            while(counter < 3) {
+//                Thread thread1 = new Thread(new Thread1());
+//                thread1.start();
+//                Thread thread2 = new Thread(new Thread2());
+//                thread2.start();
+//                Thread.sleep(5000);
+//                counter++;
+//            }
+
+            Thread thread1 = new Thread(new Thread1());
+            thread1.start();
+            Thread thread2 = new Thread(new Thread2());
+            thread2.start();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -121,6 +133,24 @@ public class TSCTest1 {
         e.writeObject(result);
         e.close();
     }
+
+    //config.properties
+    /*public static String[] properties() {
+        Properties property = new Properties();
+        FileInputStream fis;
+        String[] file = new String[3];
+        try {
+            fis = new FileInputStream("src\\resources\\config.properties");
+            property.load(fis);
+            file[0] = property.getProperty("dep1");
+            file[1] = property.getProperty("dep2");
+            file[2] = property.getProperty("out");
+
+        } catch (IOException e) {
+            System.err.println("ОШИБКА: Файл свойств отсуствует!");
+        }
+        return file;
+    }*/
 }
 
 

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<dep1>
+    <event>
+      <Name>Галустян М.И.</Name>
+      <Salary>45000</Salary>
+    </event>
+    <event>
+      <Name>Шматко В.А.</Name>
+      <Salary>38000</Salary>
+    </event>
+	<event>
+      <Name>Суббота В.М.</Name>
+      <Salary>67000</Salary>
+    </event>
+	<event>
+      <Name>Сатурдяй И.М.</Name>
+      <Salary>46000</Salary>
+    </event>
+	<event>
+      <Name>Гаджимагомедов А.Р.</Name>
+      <Salary>43000</Salary>
+    </event>
+	<event>
+      <Name>Абиров И.М.</Name>
+      <Salary>39000</Salary>
+    </event>
+	<event>
+      <Name>Краснов П.У.</Name>
+      <Salary>50000</Salary>
+    </event>
+	<event>
+      <Name>Богданов С.К.</Name>
+      <Salary>78000</Salary>
+    </event>
+	<event>
+      <Name>Сергеев Н.И.</Name>
+      <Salary>67000</Salary>
+    </event>
+	<event>
+      <Name>Некрасов О.А.</Name>
+      <Salary>65000</Salary>
+    </event>
+ </dep1>

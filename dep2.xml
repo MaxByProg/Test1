@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<dep2>
+    <event>
+      <Name>Бахтикиреев М.И.</Name>
+      <Salary>45000</Salary>
+    </event>
+    <event>
+      <Name>Бангладешов В.А.</Name>
+      <Salary>33000</Salary>
+    </event>
+	<event>
+      <Name>Шерстяков В.М.</Name>
+      <Salary>27000</Salary>
+    </event>
+	<event>
+      <Name>Керамитов И.М.</Name>
+      <Salary>56000</Salary>
+    </event>
+	<event>
+      <Name>Водородов А.Р.</Name>
+      <Salary>41000</Salary>
+    </event>
+	<event>
+      <Name>Азотов И.М.</Name>
+      <Salary>18000</Salary>
+    </event>
+	<event>
+      <Name>Кислородов П.У..</Name>
+      <Salary>30000</Salary>
+    </event>
+	<event>
+      <Name>Неонов С.К.</Name>
+      <Salary>98000</Salary>
+    </event>
+	<event>
+      <Name>Ксенонов Н.И.</Name>
+      <Salary>62000</Salary>
+    </event>
+	<event>
+      <Name>Углеродов О.А.</Name>
+      <Salary>35000</Salary>
+    </event>
+ </dep2>
