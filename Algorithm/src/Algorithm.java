@@ -5,21 +5,27 @@ import java.util.*;
  * Created by mbikov on 26.07.2017.
  */
 public class Algorithm {
-    private static Algorithm instance;
+    private static volatile Algorithm instance;
 
-    private Algorithm(int i1, int i2, List<Integer> l1, List<String> f1, List<String> r) {
-        for (int i = 0; i < l1.size(); i++) {
-            int a = l1.get(i);
+    private Algorithm(int i1, int i2, List<Integer> l, List<String> f, List<String> r) {
+        for (int i = 0; i < l.size(); i++) {
+            int a = l.get(i);
             if (a < i1 && a > i2) {
-                r.add(f1.get(i) + " переходит в другой отдел ");
+                r.add(f.get(i) + " переходит в другой отдел ");
             }
         }
     }
 
-    public static synchronized Algorithm getInstance(int i1, int i2, List<Integer> l1, List<String> f1, List<String> r) {
-        if(instance == null) {
-            instance = new Algorithm(i1, i2, l1, f1, r);
+    public static Algorithm getInstance(int i1, int i2, List<Integer> l, List<String> f, List<String> r) {
+        Algorithm localinstance = instance;
+        if(localinstance == null) {
+            synchronized (Algorithm.class) {
+                localinstance = instance;
+                    if(localinstance == null) {
+                        instance = localinstance = new Algorithm(i1, i2, l, f, r);
+                    }
+            }
         }
-        return instance;
+        return localinstance;
     }
 }

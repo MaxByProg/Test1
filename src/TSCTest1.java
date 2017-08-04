@@ -34,20 +34,17 @@ public class TSCTest1 {
 
         // цикл для чтения потоков
         try {
-//            int counter = 0;
-//            while(counter < 3) {
-//                Thread thread1 = new Thread(new Thread1());
-//                thread1.start();
-//                Thread thread2 = new Thread(new Thread2());
-//                thread2.start();
-//                Thread.sleep(5000);
-//                counter++;
-//            }
+            int counter = 0;
+            while(counter < 3) {
+                Thread thread1 = new Thread(new Thread1());
+                thread1.start();
+                Thread thread2 = new Thread(new Thread2());
+                thread2.start();
+                Thread.sleep(5000);
+                counter++;
+            }
 
-            Thread thread1 = new Thread(new Thread1());
-            thread1.start();
-            Thread thread2 = new Thread(new Thread2());
-            thread2.start();
+
 
         } catch (Exception e) {
             e.printStackTrace();
